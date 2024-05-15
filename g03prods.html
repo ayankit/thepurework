@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>GARARA</title>
+    <link rel="icon" type="/images/logom.png" href="/images/logom.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="jscripts.js"></script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+.productspre{
+    display: grid;
+    grid-template-columns: 20% 40% 40%;
+    gap: 20px;
+    font-family: "Montserrat", sans-serif;
+    margin-top: 30px;
+}
+.minipre{
+    height: 30vh;
+    width: 100%;
+    margin-left: 20px;
+    border: 5px solid rgb(255, 255, 255);
+    margin-right: 30px;
+    cursor: pointer;
+}
+.minipre img{
+    height: 100%;
+}
+.mainprodpre{
+    height: 90vh;
+}
+.mainprodpre img{
+    background-size: cover;
+    height: 100%;
+}
+.prodescpre{
+    margin-right: 50px;
+}
+.prodescpre #orderno{
+    background-color: #98654f;
+    border: 2px solid #965234;
+    font-size: 12px;
+    border-radius: 10px;
+    color: #fff;
+    padding: 3px 8px;
+    width: auto;
+    margin-bottom: 30px;
+}
+.prodescpre h2{
+    text-transform: uppercase;
+}
+.prodescpre p{
+    text-transform: capitalize;
+    font-size: 13px;
+}
+.prodescpre h5{
+    padding-bottom: 8px;
+    text-transform: capitalize;
+    font-size: 13px;
+}
+.prodescpre ol{
+    list-style: none;
+    text-transform: uppercase;
+}
+.prodescpre li{
+    display: inline;
+    border: 1px solid #000;
+    padding: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.black{
+    background-color: #9E4D2A;
+    color: aliceblue;
+}
+#quanipre{
+    padding: 0px 4px;
+}
+option{
+    font-size: 13px;
+}
+h4{
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    margin-top: 16px;
+}
+#buypre{
+    background-color: #9E4D2A;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    width: 90%;
+    border: none;
+    padding: 10px 90px;
+    text-transform: uppercase;
+    border: 2px solid #9E4D2A;
+    cursor: pointer;
+}
+#buypre:hover {
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+#buypre:hover::before {
+    -webkit-animation: sh02 0.5s 0s linear;
+    -moz-animation: sh02 0.5s 0s linear;
+    animation: sh02 0.5s 0s linear;
+}
+#buypre::before {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 86%;
+    position: absolute;
+    top: 7%;
+    left: 0%;
+    opacity: 0;
+    background: #fff;
+    box-shadow: 0 0 50px 30px #fff;
+    -webkit-transform: skewX(-20deg);
+    -moz-transform: skewX(-20deg);
+    -ms-transform: skewX(-20deg);
+    -o-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+}
+@keyframes sh02 {
+    from {
+        opacity: 0;
+        left: 0%;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        left: 100%;
+}
+}
+#buypre:active {
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: box-shadow 0.2s ease-in;
+    -moz-transition: box-shadow 0.2s ease-in;
+    transition: box-shadow 0.2s ease-in;
+}
+#heart{
+    margin: 10px;
+    font-size:30px;
+    cursor: pointer;
+}
+#colpre{
+    cursor: pointer;
+} 
+#colpre h4{
+    padding-top: 20px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.descpre{
+    padding: 40px 40px;
+    margin-top: 50px;
+}
+.descpre p{
+    font-weight: 400;
+    margin-bottom: 4px;
+    font-size: 14px;
+}
+#colpre0,#colpre1,#colpre2,#colpre3{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+#conspre1,#conspre2,#conspre3{
+    display: none;
+}
+.locpre{
+    text-align: center;
+    margin-top: 100px;
+}
+.locpre h4{
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;        
+}
+.locpre h6{
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+.delivpre{
+    background-color: #000;
+    color: #fff;
+    padding: 30px;
+    text-align: center;
+    margin-top: 80px;
+    display: none;
+}
+.delivpre .pwidpre{
+    width: 70%;
+    margin: auto;
+    margin-top: 30px;
+}
+@media only screen and (max-width: 991px) {
+
+.productspre{
+    display: grid;
+    grid-template-columns: 100%;
+}
+.miniespre{
+    order: 1;
+    display: flex;
+}
+.mainprodpre{
+    order: 0;
+    /* background-color: pink; */
+    margin: 0 40px;
+}
+.minipre{
+    margin:30px 0;
+    height: 40vh;
+}
+.prodescpre{
+    order: 2;
+    margin: 0 40px;
+}
+}
+@media only screen and (max-width: 607px) {
+
+.minipre{
+    height: 30vh;
+}
+.mainprodpre{
+    float: left !important;
+    margin-left: 20px;
+}
+}
+.whatsapp{
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    cursor: pointer;
+}
+#formdetail{
+    display: none;
+}
+
+.overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 9999;
+            text-align: center;
+        }
+
+        .overlay img {
+            margin-top: 50px; /* Adjust as needed */
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+</style>
+</head>
+<body>
+    <div class="navpre">
+        <div class="text-left">
+            <svg aria-hidden="true" onclick="hampre()" id="men" fill="none" focusable="false" width="24" class="header__nav-icon icon icon-hamburger" viewBox="0 0 24 24">
+            <path d="M1 19h22M1 12h22M1 5h22" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"></path></svg>
+        </div>
+        <div class=" text-center" >
+            <img src="images/logo.png" width="140" alt="">
+        </div>
+        <div class="text-right">
+        </div>
+    </div>
+    
+    <div id="menupre">
+        <div class="inmenupre" >
+            <img src="images/close.png" id="close" width="18">
+        </div>
+         
+    <div class="panel-group" id="accordion">
+    
+    <div class="panel-heading flexes">
+    <h4 class="panel-title">
+    <a href="index.html">home</a>
+    </h4>
+    </div> 
+    
+    <div class="panel-heading flexes">
+    <h4 class="panel-title">
+    <a href="index.html">new arrival</a>
+    </h4>
+    </div>     
+    
+    <div class="panel panel-default">
+    <div class="panel-heading">
+    <div class="flexes">
+    <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+    <div class="d-flex align-items-center justify-content-between vmkdm" >
+    <div>
+     <h4 class="panel-title">shop by styles</h4>
+    </div>
+    <div>
+      <svg aria-hidden="true" focusable="false" fill="none" width="12" class="icon icon-chevron-right  icon--direction-aware" viewBox="0 0 10 10">
+        <path d="m3 9 4-4-4-4" stroke="currentColor" stroke-linecap="square"></path>
+      </svg>
+    </div>
+    </div>
+    </a>
+    </div>
+    </div>
+    <div id="collapse2" class="panel-collapse collapse">
+    <div class="panel-body hoves">    
+      <ol style="font-size: 14px; list-style: none; font-family: 'Montserrat', sans-serif;">
+        <li><a href="anarkali.html">anarkali</a></li>
+        <li><a href="garara.html">garara</a></li>
+        <li><a href="kurta.html">kurta</a></li>
+        <li><a href="kurtaleh.html">kurta-lehenga</a></li>
+        <li><a href="capes.html">capes</a></li>
+        <li><a href="garara.html">garara</a></li>
+      </ol>
+    </div>
+    </div>
+    </div>
+    
+    
+    
+    <div class="panel-heading flexes">
+    <h4 class="panel-title">
+    <a href="banmil.html">shop by collection</a>
+    </h4>
+    </div> 
+    
+    </div>
+    </div>
+    
+    
+    
+    <nav class="navbar navbar-expand-sm" id="nabslin">
+    
+      <!-- Links -->
+      <ul class="navbar-nav justify-content-center lianomen">
+      
+        <li class="nav-item ">
+          <a class="nav-link" href="index.html">
+            home
+          </a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="index.html">
+            new arrival
+          </a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="banmil.html">
+            shop by collection
+          </a>
+        </li>
+    
+        <!-- Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+            shop by styles
+          </a>
+          <div class="dropdown-menu">
+            <div class="gizs">
+              <div>
+            <a class="dropdown-item px-3 py-2" href="anarkali.html">anarkali</a>
+            <a class="dropdown-item px-3 py-2" href="garara.html">garara</a>
+            <a class="dropdown-item px-3 py-2" href="kurta.html">kurta</a>
+            </div>
+            <div>
+            <a class="dropdown-item px-3 py-2" href="kurtaleh.html">kurta-lehenga</a>
+            <a class="dropdown-item px-4 py-2" href="capes.html">capes</a>
+            <a class="dropdown-item px-4 py-2" href="garara.html">garara</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    
+    <div class="whatsapp"><a href="https://wa.me/9311829132" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="48px" height="48px" clip-rule="evenodd">
+            <path fill="#fff" d="M4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98c-0.001,0,0,0,0,0h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303z"/>
+            <path fill="#fff" d="M4.868,43.803c-0.132,0-0.26-0.052-0.355-0.148c-0.125-0.127-0.174-0.312-0.127-0.483l2.639-9.636c-1.636-2.906-2.499-6.206-2.497-9.556C4.532,13.238,13.273,4.5,24.014,4.5c5.21,0.002,10.105,2.031,13.784,5.713c3.679,3.683,5.704,8.577,5.702,13.781c-0.004,10.741-8.746,19.48-19.486,19.48c-3.189-0.001-6.344-0.788-9.144-2.277l-9.875,2.589C4.953,43.798,4.911,43.803,4.868,43.803z"/><path fill="#cfd8dc" d="M24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,4C24.014,4,24.014,4,24.014,4C12.998,4,4.032,12.962,4.027,23.979c-0.001,3.367,0.849,6.685,2.461,9.622l-2.585,9.439c-0.094,0.345,0.002,0.713,0.254,0.967c0.19,0.192,0.447,0.297,0.711,0.297c0.085,0,0.17-0.011,0.254-0.033l9.687-2.54c2.828,1.468,5.998,2.243,9.197,2.244c11.024,0,19.99-8.963,19.995-19.98c0.002-5.339-2.075-10.359-5.848-14.135C34.378,6.083,29.357,4.002,24.014,4L24.014,4z"/>
+            <path fill="#40c351" d="M35.176,12.832c-2.98-2.982-6.941-4.625-11.157-4.626c-8.704,0-15.783,7.076-15.787,15.774c-0.001,2.981,0.833,5.883,2.413,8.396l0.376,0.597l-1.595,5.821l5.973-1.566l0.577,0.342c2.422,1.438,5.2,2.198,8.032,2.199h0.006c8.698,0,15.777-7.077,15.78-15.776C39.795,19.778,38.156,15.814,35.176,12.832z"/>
+            <path fill="#fff" fill-rule="evenodd" d="M19.268,16.045c-0.355-0.79-0.729-0.806-1.068-0.82c-0.277-0.012-0.593-0.011-0.909-0.011c-0.316,0-0.83,0.119-1.265,0.594c-0.435,0.475-1.661,1.622-1.661,3.956c0,2.334,1.7,4.59,1.937,4.906c0.237,0.316,3.282,5.259,8.104,7.161c4.007,1.58,4.823,1.266,5.693,1.187c0.87-0.079,2.807-1.147,3.202-2.255c0.395-1.108,0.395-2.057,0.277-2.255c-0.119-0.198-0.435-0.316-0.909-0.554s-2.807-1.385-3.242-1.543c-0.435-0.158-0.751-0.237-1.068,0.238c-0.316,0.474-1.225,1.543-1.502,1.859c-0.277,0.317-0.554,0.357-1.028,0.119c-0.474-0.238-2.002-0.738-3.815-2.354c-1.41-1.257-2.362-2.81-2.639-3.285c-0.277-0.474-0.03-0.731,0.208-0.968c0.213-0.213,0.474-0.554,0.712-0.831c0.237-0.277,0.316-0.475,0.474-0.791c0.158-0.317,0.079-0.594-0.04-0.831C20.612,19.329,19.69,16.983,19.268,16.045z" clip-rule="evenodd"/>
+        </svg></a>
+    </div>
+
+          <div class="productspre">
+            <div class="miniespre">
+                <div class="minipre">
+                    <img src="/images/g03prods1.JPG" class="mx-auto d-block" onclick="sideprod1()" alt="">
+                </div>
+                <div class="minipre">
+                    <img src="/images/g03prods2.JPG" class="mx-auto d-block" onclick="sideprod2()" alt="">
+                </div>
+                <div class="minipre">
+                    <img src="/images/g03prods3.JPG" class="mx-auto d-block" onclick="sideprod3()" alt="">
+                </div>
+            </div>
+            <div class="mainprodpre">
+                <img src="/images/g03prods1.JPG" class="mx-auto d-block" id="mainprod" alt="">
+            </div>
+            <div class="prodescpre">
+                <h2>MUSTARD YELLOW MOTI MEHEL WORK SHORT KURTA GARARA SET SADDLE DUPATTA </h2>
+                <p>This set features a mustard yellow short kurta and garara set with intricate moti mehel work, paired with a saddle dupatta for a stylish and traditional look.</p>
+                
+                <button id="orderno">Product Number: G03PRODS</button>
+                <form action="#">
+                    <label for="cars" class="pr-3">MRP: 24,900</label>
+                </form>
+                <p>(inclusive of all taxs)</p>
+                <h5 style="font-size: 16px; font-weight: 400; margin-top: 20px;">size</h5>
+
+                <ol class="p-0 mt-4 mb-4">
+                    <li class="box">xs</li>
+                    <li class="box">s</li>
+                    <li class="box">m</li>
+                    <li class="box">l</li>
+                    <li class="box">xl</li>
+                    <li class="box">2xl</li>
+                </ol>
+                
+                <form action="#" class="pt-3">
+                    <label for="cars" class="pr-3"><h5 style="font-size: 16px; font-weight: 400;">Quantity</h5></label>
+                    <select name="cars" id="quanipre">
+                        <option value="one">1</option>
+                        <option value="two">2</option>
+                        <option value="three">3</option>
+                        <option value="four">4</option>
+                        <option value="five">5</option>
+                        <option value="six">6</option>
+                        <option value="seven">7</option>
+                        <option value="eight">8</option>
+                    </select>
+                </form>
+                <div class="main_btn">
+                    <a href="https://wa.me/9311829132" target="_blank">
+                    <button id="buypre">Check Availability</button>
+                    </a>
+                    <div id="formdetail">
+                    <form action="availability.php">
+                        <div class="form-group">
+                        <label for="email" style="font-size: 16px; margin-top: 30px; margin-bottom: 15px;">Enter your details to get notified on the product.</label>
+                        <input type="email" class="form-control" id="productid" style="cursor: not-allowed; font-size: 14px;" value="G03PRODS" readonly name="prodid">
+                        </div>
+                        <div class="form-group">
+                        <label for="email" style="font-size: 14px; margin-bottom: 15px;">E-mail:</label>
+                        <input type="email" class="form-control" id="email" style="font-size: 14px;" placeholder="Enter E-mail" name="email" required>
+                        </div>
+                        <button type="submit" class="btn mt-2" style="font-size: 14px; background-color: #9E4D2A; color: #fff;">Notify Me</button>
+                    </form>
+                    </div>
+                    
+                    
+                </div>
+                </div>
+        </div>
+
+       
+    <div class="overlay" id="overlay">
+        <span class="close-btn" onclick="closeOverlay()">×</span>
+        <img src="images/sizechart.png" alt="Overlay Image">
+    </div>
+<div class="container-fluid descpre text-capitalize">
+    
+    <div id="colpre0">
+        <div><h4>Description</h4></div>
+        <div><i class="fa fa-chevron-down" id="down0"></i></div>
+    </div>
+    <hr>
+    <div id="conspre0">
+        <p>Fit: True to Size.</p>
+        <p>silk and organza</p>
+        <p>Soft and breathable fabric.</p>
+        <p>Hand work.</p>
+        <p>Its sustainable.</p>
+    </div>
+    
+    <div id="colpre1">
+        <div><h4>Specification</h4></div>
+        <div><i class="fa fa-chevron-down" id="down1"></i></div>
+    </div>
+    <hr>
+    <div id="conspre1">
+        <p class="pt-2">color: MUSTARD YELLOW</p>
+        <p>Embroidery Details: MOTI</p>
+        <p>fabric: silk, organza</p>
+        <p>number of pieces in set: 3</p>
+        <p>Dispatch Timeline: 2-3 Weeks</p>
+        <p>wash care: Dry Clean Only</p>
+        <p>for customization , email us on customercare@thepurework.com</p>
+    </div>
+
+    <div id="colpre2">
+        <div><h4>Allteration guide</h4></div>
+        <div><i class="fa fa-chevron-down" id="down2"></i></div>
+    </div>
+    <hr>
+    <div id="conspre2">
+        <p>We offer a range of sizes to accommodate different body types and preferences. Our sizes typically range from small to extra-large, with some styles available in larger or smaller sizes as well. To ensure the best fit, please refer to our <span onclick="openOverlay()" style="cursor: pointer; color: blue;">size chart </span>for accurate measurements and guidance. </p>
+            <p>If you have any questions about sizing or need assistance, our customer service team is here to help.
+                <span onclick="openOverlay()" style="cursor: pointer; color: blue;">Check Out the size Chart.</span>
+        </p>
+    </div>
+    <div id="colpre3">
+        <div><h4>Contacts</h4></div>
+        <div><i class="fa fa-chevron-down" id="down3"></i></div>
+    </div>
+    <hr>
+    <div id="conspre3">
+        <p>Our stylist can assist you further :</p>
+        <p><i class="fa fa-whatsapp pr-3" aria-hidden="true"></i>Call or WhatsApp: +91 9311829132</p>
+        <p><i class="fa fa-envelope-o pr-3" aria-hidden="true"></i>send a email: thepurework2@gmail.com</p>
+    </div>
+    </div>
+    </div>
+</div>
+<div class="footer mt-3">
+    <div class="row mx-5">
+    <div class="col-xl-4 col-md-4 col-sm-6 pt-5">
+        <ol>
+            <li><h5><a href="#">Experience the attire</h5></a></li>
+            <li><a href="index.html">New Arrival</a></li>
+            <li><a href="banmil.html">Shop By Categories</a></li>
+        </ol>
+    </div>
+    <div class="col-xl-4 col-md-4 col-sm-6 pt-5">
+        <ol>
+            <li><h5><a href="#">Shop By Styles</h5></a></li>
+            <li><a href="anarkali.html">Anarkali</a></li>
+            <li><a href="capes.html">Cape</a></li>
+            <li><a href="kurtaleh.html">Kurta-Lehenga</a></li>
+            <li><a href="kurta.html">Kurta</a></li>
+            <li><a href="garara.html">Garara</a></li>
+        </ol>
+    </div>
+    <div class="col-xl-4 col-md-4 col-sm-6 pt-5">
+        <ol>
+            <li><h5>follow us on</h5></li>
+            <li><a href="https://www.instagram.com/thepurework?igsh=MXJjNWh3Y2h4dGxoag==" target="_blank">
+                <svg fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="35px" height="35px"><path d="M 16 3 C 8.8324839 3 3 8.8324839 3 16 L 3 34 C 3 41.167516 8.8324839 47 16 47 L 34 47 C 41.167516 47 47 41.167516 47 34 L 47 16 C 47 8.8324839 41.167516 3 34 3 L 16 3 z M 16 5 L 34 5 C 40.086484 5 45 9.9135161 45 16 L 45 34 C 45 40.086484 40.086484 45 34 45 L 16 45 C 9.9135161 45 5 40.086484 5 34 L 5 16 C 5 9.9135161 9.9135161 5 16 5 z M 37 11 A 2 2 0 0 0 35 13 A 2 2 0 0 0 37 15 A 2 2 0 0 0 39 13 A 2 2 0 0 0 37 11 z M 25 14 C 18.936712 14 14 18.936712 14 25 C 14 31.063288 18.936712 36 25 36 C 31.063288 36 36 31.063288 36 25 C 36 18.936712 31.063288 14 25 14 z M 25 16 C 29.982407 16 34 20.017593 34 25 C 34 29.982407 29.982407 34 25 34 C 20.017593 34 16 29.982407 16 25 C 16 20.017593 20.017593 16 25 16 z"/></svg></a></li>
+        </ol>
+    </div>
+    </div>
+</div>
+
+
+
+<script>  
+    // ------- document first
+    $(document).ready(function(){
+        $("#colpre0").click(function(){
+            $("#conspre0").toggle();
+        });
+    });
+    
+    // ------- document second
+    $(document).ready(function(){
+        $("#colpre1").click(function(){
+            $("#conspre1").toggle();
+        });
+    });
+    
+    // ------- document third
+    $(document).ready(function(){
+        $("#colpre2").click(function(){
+            $("#conspre2").toggle();
+        });
+    });
+    
+    // ------- document fourth
+    $(document).ready(function(){
+        $("#colpre3").click(function(){
+            $("#conspre3").toggle();
+        });
+    });
+        function sideprod1(){
+            document.getElementById('mainprod').src='/images/g03prods1.JPG';
+        }
+        function sideprod2(){
+            document.getElementById('mainprod').src='/images/g03prods2.JPG';
+        }
+        function sideprod3(){
+            document.getElementById('mainprod').src='/images/g03prods3.JPG';
+        }
+        function formdetail(){
+            document.getElementById('formdetail').style='display:block';
+        }
+        function openOverlay() {
+            document.getElementById("overlay").style.display = "block";
+        }
+
+        function closeOverlay() {
+            document.getElementById("overlay").style.display = "none";
+        }
+        
+    let currentBox = null;
+
+document.querySelectorAll('.box').forEach(box => {
+    box.addEventListener('click', () => {
+        if (currentBox) {
+            currentBox.classList.remove('black');
+        }
+        box.classList.add('black');
+        currentBox = box;
+    });
+});
+
+</script>
+
+</body>
+</html>

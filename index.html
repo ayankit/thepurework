@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>THE PURE WORK</title>
+    <link rel="icon" type="/images/logom.png" href="/images/logom.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="jscripts.js"></script>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+    .second{
+        text-align: center;
+    }
+    .second a{
+      color: #000;
+      text-decoration: none;
+    }
+    .second h5{
+        text-transform: uppercase;
+        font-size: 16px;
+        font-family: "Montserrat", sans-serif;
+        margin-top: 12px;
+        font-weight: 400;
+    }
+    .second h6{
+        font-size: 15px;
+        font-family: "Montserrat", sans-serif;
+        margin-top: 12px;
+        font-weight: 500;
+    }
+    .butpre{
+        margin-top: 40px;
+        border: none;
+        padding: 8px 10px;
+        /* border-bottom: 1px solid #000; */
+        text-transform: uppercase;
+        font-family: "Montserrat", sans-serif;
+        font-size: 14px;
+        background-color: transparent;
+        transition: .6s;
+    }
+    .butpre:hover{
+        border-bottom: 1px solid #000;
+    }
+    .bannerpre{
+      background-color: #000;
+      height: auto;
+      width: 100%;
+      margin-top: 30px;
+    }
+    .options p{
+        transition: .3s ease-in-out;
+        font-family: "Montserrat", sans-serif;
+        font-size: 15px;
+    }
+    .options p:hover{
+        border-bottom: 2px solid #000;
+        cursor: pointer;
+    }
+    .cmor{
+        background-color: #000;
+        color: #fff;
+        float: right;
+        padding: 8px 20px;
+        text-transform: uppercase;
+        font-size: 14px;
+        border: none;
+        font-family: "Montserrat", sans-serif;
+        font-size: 14px;
+    }
+    
+    .choipre img{
+        max-width: 100%;
+        max-height: 400px; /* Set the maximum height here */
+        height: auto;
+        display: block;
+    }
+    @media only screen and (max-width: 1200px) { 
+    .arival_img{
+        margin: auto;
+    }
+    }
+    @media only screen and (max-width: 575px) {
+    .cmor{
+        float: left;
+        margin-top: 20px;
+    }
+    .choipre{
+        text-align: center;
+        margin: auto;
+    }
+    .choipre img{
+        margin: auto;
+    }
+    }
+    
+    @media only screen and (max-width: 1009px) {
+    .arival_img{
+        margin: auto;
+    }
+    }
+    .choipre h5{
+        text-transform: uppercase;
+        font-family: "Montserrat", sans-serif;
+        font-size: 16px;
+        margin-top: 10px;
+        font-weight: 400;
+    }
+    .choipre h6{
+        font-family: "Montserrat", sans-serif;
+        font-size: 18px;
+    }
+    #catepre2,#catepre3,#catepre4{
+        display: none;
+    }
+    .locpre{
+        text-align: center;
+        margin-top: 100px;
+    }
+    .locpre h4{
+        text-transform: uppercase;
+        font-family: "Montserrat", sans-serif;        
+    }
+    .locpre h6{
+        text-transform: uppercase;
+        font-family: "Montserrat", sans-serif;
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+    .placepre{
+        background-color:#ddd;
+        width: 100%;
+        height: 70vh;
+        margin: auto;
+    }
+    #menu{
+        display: none;
+    }
+    .arival_img{
+        max-width: 100%;
+        max-height: 400px; /* Set the maximum height here */
+        height: auto;
+        display: block;
+        margin-bottom: 20px;
+        border-radius: 200px;
+    }
+    .choipre a{
+        color: #000;
+        text-decoration: none;
+    }
+    .locapre{
+        width: 100%;
+        height: 70vh;
+    }
+    .locats{
+        background-color: #000;
+        width: 100%;
+        height: 100%;
+      background-image: url('/images/location.jpg');
+      background-size: cover;}
+      .mnpost{
+      background-color: #000;
+      height: auto;
+      width: 100%;
+      margin-top: 30px;
+      }
+
+      /* slider    */
+      
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}.mySlides {display: none;}
+.mySlides img {vertical-align: middle;}
+</style>
+</head>
+<body> 
+    
+    
+        
+    <div class="navpre">
+        <div class="text-left">
+            <svg aria-hidden="true" onclick="hampre()" id="men" fill="none" focusable="false" width="24" class="header__nav-icon icon icon-hamburger" viewBox="0 0 24 24">
+            <path d="M1 19h22M1 12h22M1 5h22" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"></path></svg>
+        </div>
+        <div class=" text-center" >
+            <img src="images/logo.png" width="140" alt="">
+        </div>
+        <div class="text-right">
+        </div>
+    </div>
+
+    <div id="menupre">
+        <div class="inmenupre" >
+            <img src="images/close.png" id="close" width="18">
+        </div>
+         
+<div class="panel-group" id="accordion">
+
+<div class="panel-heading flexes">
+  <h4 class="panel-title">
+    <a href="index.html">home</a>
+  </h4>
+</div> 
+
+<div class="panel-heading flexes">
+  <h4 class="panel-title">
+    <a href="index.html">new arrival</a>
+  </h4>
+</div>     
+
+<div class="panel panel-default">
+<div class="panel-heading">
+  <div class="flexes">
+    <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+  <div class="d-flex align-items-center justify-content-between vmkdm" >
+    <div>
+     <h4 class="panel-title">shop by styles</h4>
+    </div>
+    <div>
+      <svg aria-hidden="true" focusable="false" fill="none" width="12" class="icon icon-chevron-right  icon--direction-aware" viewBox="0 0 10 10">
+        <path d="m3 9 4-4-4-4" stroke="currentColor" stroke-linecap="square"></path>
+      </svg>
+    </div>
+  </div>
+  </a>
+  </div>
+</div>
+<div id="collapse2" class="panel-collapse collapse">
+  <div class="panel-body hoves">    
+      <ol style="font-size: 14px; list-style: none; font-family: 'Montserrat', sans-serif;">
+        <li><a href="anarkali.html">anarkali</a></li>
+        <li><a href="garara.html">garara</a></li>
+        <li><a href="kurta.html">kurta</a></li>
+        <li><a href="kurtaleh.html">kurta-lehenga</a></li>
+        <li><a href="capes.html">capes</a></li>
+        <li><a href="garara.html">garara</a></li>
+      </ol>
+  </div>
+</div>
+</div>
+
+
+
+<div class="panel-heading flexes">
+<h4 class="panel-title">
+  <a href="banmil.html">shop by collection</a>
+</h4>
+</div> 
+
+</div>
+</div>
+
+
+
+    <nav class="navbar navbar-expand-sm" id="nabslin">
+
+      <!-- Links -->
+      <ul class="navbar-nav justify-content-center lianomen">
+      
+        <li class="nav-item ">
+          <a class="nav-link" href="index.html">
+            home
+          </a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="#cnew1">
+            new arrival
+          </a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="banmil.html">
+            shop by collection
+          </a>
+        </li>
+    
+        <!-- Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+            shop by styles
+          </a>
+          <div class="dropdown-menu">
+            <div class="gizs">
+              <div>
+            <a class="dropdown-item px-3 py-2" href="anarkali.html">anarkali</a>
+            <a class="dropdown-item px-3 py-2" href="garara.html">garara</a>
+            <a class="dropdown-item px-3 py-2" href="kurta.html">kurta</a>
+            </div>
+            <div>
+            <a class="dropdown-item px-3 py-2" href="kurtaleh.html">kurta-lehenga</a>
+            <a class="dropdown-item px-4 py-2" href="capes.html">capes</a>
+            <a class="dropdown-item px-4 py-2" href="garara.html">garara</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+
+    
+<div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <a href="anarkali.html">
+      <div class="numbertext">1 / 3</div>
+      <img src="images/anarkali.png" style="width: 100%;">
+      </a>
+    </div>
+    
+    <div class="mySlides fade">
+      <a href="kurta.html">
+      <div class="numbertext">2 / 3</div>
+      <img src="images/kurta.png" style="width: 100%;">
+      </a>
+    </div>
+    
+    <div class="mySlides fade">
+      <a href="capes.html">
+      <div class="numbertext">3 / 3</div>
+      <img src="images/capes.png" style="width: 100%;">
+      </a>
+    </div>
+    
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+    </div>
+    
+
+
+
+
+
+
+
+
+
+<div class="second mt-2 pt-5 mb-5" id="cnew1">
+    <img src="/images/logom.png" class="logpre" width="50">
+    <!-- <h4 class="text-center" style="font-size: 14px; font-family: 'Montserrat', sans-serif;">- new arrival -</h4> -->
+    <h3 class="text-center mt-3 text-uppercase" style="font-size: 18px; font-family: 'Montserrat', sans-serif;">new arrivals</h3>
+    <p class="mb-5 pt-2 pb-2">Discover our exquisite new arrivals, curated to elevate your style with sophistication and grace.</p>
+        <div class="row mx-2">
+            <div class="col-xl-3 col-lg-6 col-md-6 mt-1 mx-auto">    
+            <a href="k12prods.html" target="_blank"> 
+                <img src="images/k12prods1.JPG" id="na01" class="arival_img" onmouseover="na01a()" onmouseout="na01b()">
+                <h5 style="padding: 0 30px;">DARK BLUE ZAAL MOTI DABKA HEAVY WORK KURTA WITH PANTS AND BEIGE DUPATTA</h5>
+                <h6 class="mb-5 mt-2">Rs. 33,500</h6>
+                </a>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-md-6 mt-1 mx-auto">   
+              <a href="c03prods.html" target="_blank">    
+                <img src="images/c03prods2.jpg" id="na02" class="arival_img" onmouseover="na02a()" onmouseout="na02b()">
+                <h5 style="padding: 0 30px;">MINT ORANGE APPLIQUE WORK LONG FLOOR LENGTH DRESS WITH FRILL CAPE </h5>
+                <h6 class="mb-5 mt-2">Rs. 27,900</h6>
+              </a>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-md-6 mt-1 mx-auto">   
+              <a href="k13prods.html" target="_blank">    
+                <img src="images/k13prods1.JPG" id="na03" class="arival_img" onmouseover="na03a()" onmouseout="na03b()">
+                <h5 style="padding: 0 30px;">CHAMPAIGN IVORY NAVRATAN OPEN ANGRAKHA KURTA PANTS SET </h5>
+                <h6 class="mb-5 mt-2">Rs. 14,500</h6>
+              </a>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-md-6 mt-1 mx-auto">  
+              <a href="b01prods.html" target="_blank">     
+                <img src="images/b01prods1.JPG" id="na04" class="arival_img" onmouseover="na04a()" onmouseout="na04b()">
+                <h5 style="padding: 0 30px;">BLACK GREY KAHKI BLACK HEAVY APPLIQUE DRESS</h5>
+                <h6 class="mb-5 mt-2">Rs. 10,000</h6>
+              </a>
+            </div>
+        </div>
+        <div >
+            <!-- <button class="butpre">explore more</button> -->
+        </div>
+</div>
+
+<div>
+  <a href="banmil.html" target="_blank">
+    <img src="images/banmil.png" class="bannerpre" width="1339" height="600" alt="">
+  </a>
+</div>
+ 
+<div class="third  pt-5">
+    <div class="row mx-3 mt-5 pt-5">
+        <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9"><h3 style="font-family: 'Montserrat', sans-serif; font-weight: 400;">Indulge in our elegant collection, meticulously crafted to elevate your style and captivate your senses.</h3></div>
+        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 pt-1"><button class="cmor">see more</button></div>
+    </div>
+    
+<div class="row options mx-3 mt-5">
+        <div class="d-flex text-capitalize">
+            <div class="px-3 py-1" onclick="categ1()"><p id="categ1" style="border-bottom: 2px solid #000;">All categories</div>
+            <div class="px-3 py-1" onclick="categ2()"><p id="categ2">Anarkali</p></div>
+            <div class="px-3 py-1" onclick="categ3()"><p id="categ3">Kurta</p></div>
+            <div class="px-3 py-1" onclick="categ4()"><p id="categ4">garara</p></div>
+        </div>
+</div> 
+</div>
+
+<div id="catepre1">
+
+    <!-- all categories -->
+
+    <div class="row mx-3 choipre">
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 mt-5">
+            <a href="k15prods.html" target="_blank">
+                <img src="images/k15prods1.JPG" alt="">
+                <!-- <img src="c05prods1.JPG" alt=""> -->
+                <h5>FUSCHIA SHIMAR </h5>
+            </a>
+            <h6>Rs. 28,000</h6>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 mt-5">
+            <a href="kl03prods.html" target="_blank">
+                <img src="images/kl03prods1.jpg" alt="">
+                <h5>BAZE YELLOW APPLIQUE HEAVY WORK KURTA LEHENGA YELLOW HEAVY DUPATTA SET</h5>
+                <h6>Rs. 34,900</h6>
+            </a>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 mt-5">
+            <a href="#" target="_blank">
+                <img src="images/kl02prods1.JPG" alt="">
+                <h5>CELESTE BLUE CHERRY BLOSSOM SEQUENCE WORK KURTA LEHENGA WITH CONTRASTED PINK DUPATTA</h5>
+                <h6>Rs. 26,500</h6>
+            </a>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 mt-5">
+            <a href="c04prods.html" target="_blank">
+                <img src="images/c04prods1.JPG" alt="">
+                <h5>MAUVE PURPLE MESH WORK BLOUSE SHARARA SET WITH SHOULDER CAPE</h5>
+                <h6>Rs. 34,600</h6>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div id="catepre2">
+
+    <!-- categories 2-->
+    
+    <div class="row mx-3 choipre">
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 mt-5">
+            <a href="a02prods.html" target="_blank">
+                <img src="/images/a02prods1.JPG" alt="">
+                <h5>BUTTERSCOTCH RANI VAN MOTI WORK YOF ANARKALI SHARARA SET</h5>
+                <h6>Rs. 22,900</h6>
+            </a>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 mt-5">
+            <a href="a05prods.html" target="_blank">
+                <img src="images/a05prods1.jpg" alt="">
+                <h5>MEHENDI GREEN THREAD WORK ANARKALI WITH PANTS HEAVY DUPATTA</h5>
+                <h6>Rs. 29,900</h6>
+            </a>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 mt-5">
+            <a href="a06prods.html" target="_blank">
+                <img src="images/a06prods1.JPG" alt="">
+                <h5>PURPLE GREY APPLIQUE NECK WORK ANARKALI WITH CONTRAST PANTS AND DUPATTA</h5>
+                <h6>Rs. 25,900</h6>
+            </a>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 mt-5">
+            <a href="a01prods.html" target="_blank">
+                <img src="images/a01prods1.JPG" alt="">
+                <h5>
+                    FUSCHIA PINK YOG ANARKALI GOLDEN DABKA WORK WITH SHARARA SET AND DUPATTA</h5>
+                <h6>Rs. 22,900</h6>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div id="catepre3">
+
+    <!-- categories 3-->
+    
+    
+    <div class="row mx-3 choipre">
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 mt-5">
+            <a href="k02prods.html" target="_blank">
+            <img src="images/k02prods1.JPG" alt="">
+            <h5>AQUA BLUE TRANSPARENT KURTA STYLE SHARARA WITH DUPATTA</h5>
+            <h6>Rs. 19,900</h6></a>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 mt-5">
+            <a href="k03prods.html" target="_blank">
+            <img src="images/k03prods1.JPG" alt="">
+            <h5>CHAMPAIGN RED VELVET AAPLIQUE WORK KURTA WITH PANTS AND DUPATTA</h5>
+            <h6>Rs. 18,900</h6>
+            </a>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 mt-5">
+            <a href="k01prods.html" target="_blank">
+            <img src="images/k01prods1.JPG" alt="">
+            <h5>DARK BLUE KURTA PLAZO PANTS AND DUPATTA</h5>
+            <h6>Rs. 19,500</h6>
+            </a>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 mt-5">
+            <a href="k04prods.html" target="_blank">
+            <img src="images/k04prods1.JPG" alt="">
+            <h5>BOTTLE GREEN ORGANZA KURTA WITH PANTS AND DUPATTA</h5>
+            <h6>Rs. 18,900</h6>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<div id="catepre4">
+
+    <!-- categories 4-->
+    
+    
+    <div class="row mx-3 choipre">
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 mt-5">
+            <a href="g01prods.html" target="_blank">
+            <img src="images/g01prods1.JPG" alt="">
+            <h5>BOYENSBERRY DABKA GHODA GARARA CONTRAST WITH SOFT PINK DUPATTA</h5>
+            <h6>Rs. 23,900</h6>
+            </a>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 mt-5">
+            <a href="g03prods.html" target="_blank">
+            <img src="images/g03prods1.JPG" alt="">
+            <h5>MUSTARD YELLOW MOTI MEHEL WORK SHORT KURTA GARARA SET SADDLE DUPATTA</h5>
+            <h6>Rs. 23,900</h6>
+            </a>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 mt-5">
+            <a href="g02prods.html" target="_blank">
+            <img src="images/g02prods1.JPG" alt="">
+            <h5>MUSTARD YELLOW ADITI THREAD WORK GARARA SET</h5>
+            <h6>Rs. 23,900</h6>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="locpre">
+    <img src="/images/logom.png" width="50">
+    <h4 class="mt-3">Visit us</h4>
+    <p style="font-size: 16px; width: 80%; margin: auto; padding-top: 20px;">We warmly invite you to explore our store, where each garment is a work of art, meticulously crafted with handiwork that speaks of tradition and skill. From intricate embroidery to delicate beadwork, our collection showcases the beauty.</p>
+    <div class="locs mt-5 mb-5" style="width: 80%; margin: auto;">
+        <p>Step into our store and discover the joy of wearing pieces that are not just fashionable, but also a testament to the artistry of handwork.</p>
+    </div>
+    </div>
+    
+    <div class="container-fluid mb-5">
+    <div class="row">
+        <div class="col-xl-6 col-lg-6 locapre" >
+            <div class="locats"></div>
+            <!-- <img src="/images/location.jpg" class="" alt=""> -->
+        </div>
+        <div class="col-xl-6 col-lg-6">
+            <div class="placepre">
+                    <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=648&amp;hl=en&amp;q=The%20Pue%20Work,%20S%20N.%20-306%20gora%20street%202%20lane%20shapurjat%20new%20delhi,%20Delhi,%20110049+(The%20Pue%20Work)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+                        <a href="https://www.gps.ie/">gps vehicle tracker</a>
+                    </iframe>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="footer mt-3">
+        <div class="row mx-5">
+        <div class="col-xl-4 col-md-4 col-sm-6 pt-5">
+            <ol>
+                <li><h5><a href="#">Experience the attire</h5></a></li>
+                <li><a href="index.html">New Arrival</a></li>
+                <li><a href="banmil.html">Shop By Categories</a></li>
+            </ol>
+        </div>
+        <div class="col-xl-4 col-md-4 col-sm-6 pt-5">
+            <ol>
+                <li><h5><a href="#">Shop By Styles</h5></a></li>
+                <li><a href="anarkali.html">Anarkali</a></li>
+                <li><a href="capes.html">Cape</a></li>
+                <li><a href="kurtaleh.html">Kurta-Lehenga</a></li>
+                <li><a href="kurta.html">Kurta</a></li>
+                <li><a href="garara.html">Garara</a></li>
+            </ol>
+        </div>
+        <div class="col-xl-4 col-md-4 col-sm-6 pt-5">
+            <ol>
+                <li><h5>follow us on</h5></li>
+                <li><a href="https://www.instagram.com/thepurework?igsh=MXJjNWh3Y2h4dGxoag==" target="_blank">
+                    <svg fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="35px" height="35px"><path d="M 16 3 C 8.8324839 3 3 8.8324839 3 16 L 3 34 C 3 41.167516 8.8324839 47 16 47 L 34 47 C 41.167516 47 47 41.167516 47 34 L 47 16 C 47 8.8324839 41.167516 3 34 3 L 16 3 z M 16 5 L 34 5 C 40.086484 5 45 9.9135161 45 16 L 45 34 C 45 40.086484 40.086484 45 34 45 L 16 45 C 9.9135161 45 5 40.086484 5 34 L 5 16 C 5 9.9135161 9.9135161 5 16 5 z M 37 11 A 2 2 0 0 0 35 13 A 2 2 0 0 0 37 15 A 2 2 0 0 0 39 13 A 2 2 0 0 0 37 11 z M 25 14 C 18.936712 14 14 18.936712 14 25 C 14 31.063288 18.936712 36 25 36 C 31.063288 36 36 31.063288 36 25 C 36 18.936712 31.063288 14 25 14 z M 25 16 C 29.982407 16 34 20.017593 34 25 C 34 29.982407 29.982407 34 25 34 C 20.017593 34 16 29.982407 16 25 C 16 20.017593 20.017593 16 25 16 z"/></svg></a></li>
+            </ol>
+        </div>
+        </div>
+    </div>
+    
+
+        <script>
+            function hampre(){
+                document.getElementById('menupre').style='display:block;';
+            }
+            function close(){
+                document.getElementById('menupre').style='display:none;';
+            }
+
+            // categoreies
+            function categ2(){
+                document.getElementById('catepre1').style='display:none; border-bottom: none';
+                document.getElementById('catepre3').style='display:none; border-bottom: none';
+                document.getElementById('catepre4').style='display:none; border-bottom: none';
+                document.getElementById('catepre2').style='display:block;';
+                document.getElementById('categ2').style=' border-bottom: 2px solid #000;';
+                document.getElementById('categ1').style=' border-bottom: none';
+                document.getElementById('categ3').style=' border-bottom: none';
+                document.getElementById('categ4').style=' border-bottom: none';
+            }
+            function categ3(){
+                document.getElementById('catepre1').style='display:none; border-bottom: none';
+                document.getElementById('catepre2').style='display:none; border-bottom: none';
+                document.getElementById('catepre4').style='display:none; border-bottom: none';
+                document.getElementById('catepre3').style='display:block;';
+                document.getElementById('categ3').style=' border-bottom: 2px solid #000;';
+                document.getElementById('categ2').style=' border-bottom: none';
+                document.getElementById('categ4').style=' border-bottom: none';
+                document.getElementById('categ1').style=' border-bottom: none';
+            }
+            function categ4(){
+                document.getElementById('catepre1').style='display:none; border-bottom: none';
+                document.getElementById('catepre2').style='display:none; border-bottom: none';
+                document.getElementById('catepre3').style='display:none; border-bottom: none';
+                document.getElementById('catepre4').style='display:block;';
+                document.getElementById('categ4').style=' border-bottom: 2px solid #000;';
+                document.getElementById('categ2').style=' border-bottom: none';
+                document.getElementById('categ3').style=' border-bottom: none';
+                document.getElementById('categ1').style=' border-bottom: none';
+            }
+            function categ1(){
+                document.getElementById('catepre4').style='display:none; border-bottom: none';
+                document.getElementById('catepre2').style='display:none; border-bottom: none';
+                document.getElementById('catepre3').style='display:none; border-bottom: none';
+                document.getElementById('catepre1').style='display:block;';
+                document.getElementById('categ1').style=' border-bottom: 2px solid #000;';
+                document.getElementById('categ2').style=' border-bottom: none';
+                document.getElementById('categ4').style=' border-bottom: none';
+                document.getElementById('categ3').style=' border-bottom: none';
+            }
+
+       // new arrival change
+        function na01a() {
+            document.getElementById("na01").src = 'images/k12prods2.JPG';
+        }
+        function na01b() {
+            document.getElementById("na01").src = 'images/k12prods1.JPG';
+        }
+
+        function na02a() {
+            document.getElementById("na02").src = 'images/c03prods3.jpg';
+        }
+        function na02b() {
+            document.getElementById("na02").src = 'images/c03prods2.jpg';
+        }
+
+        function na03a() {
+            document.getElementById("na03").src = 'images/k13prods2.JPG';
+        }
+        function na03b() {
+            document.getElementById("na03").src = 'images/k13prods1.JPG';
+        }
+
+        function na04a() {
+            document.getElementById("na04").src = 'images/b01prods2.JPG';
+        }
+        function na04b() {
+            document.getElementById("na04").src = 'images/b01prods1.JPG';
+        }
+
+
+        // slider   
+        
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 3000); // Change image every 2 seconds
+}
+        </script>
+
+
+</body>
+</html>
